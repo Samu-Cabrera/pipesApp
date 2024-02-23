@@ -1,1 +1,77 @@
-<p>oncommon-page works!</p>
+<p-panel [showHeader]="false" class="surface-ground">
+    <h1>
+        Pipes no comunes
+    </h1>
+    <p>
+        Pipes incluidos en el common module
+    </p>
+</p-panel>
+
+<div class="grid mt-3">
+    <div class="col-12 md:col-6 ">
+        <p-fieldset legend="i18nSelec pipe" [toggleable]="true">
+            <p>
+                Saludos {{ name | titlecase }}, 
+                es un placer 
+                <strong>
+                    {{ gender | i18nSelect:invitationMap }}
+                </strong>
+            </p>
+
+            <p-button label="Cambiar Nombre"
+                (onClick)="changeName()">
+
+            </p-button>
+        </p-fieldset>
+    </div>
+
+    <div class="col-12 md:col-6 ">
+        <p-fieldset legend="i18Plural pipe" [toggleable]="true">
+            <p>
+                Tenemos 
+                <strong>{{ clients.length| i18nPlural:clientMap }}</strong>
+            </p>
+
+            <p-button label="Eliminar clientes"
+                (onClick)="deleteClient()">
+
+            </p-button>
+        </p-fieldset>
+    </div>
+
+    <div class="col-12 md:col-6 ">
+        <p-fieldset legend="Slice pipe" [toggleable]="true">
+            <b>
+                Original
+            </b>
+            <p>
+                {{ clients }}
+            </p>
+
+            <b>
+                Slice 0-2
+            </b>
+            <p>
+                {{ clients | slice:0:2 }}
+            </p>
+        </p-fieldset>
+    </div>
+
+    <div class="col-12 md:col-6 ">
+        <p-fieldset legend="Async pipe" [toggleable]="true">
+            <pre>
+                {{ observableTimer | async }}
+            </pre>
+        </p-fieldset>
+    </div>
+
+    <div class="col-12 md:col-12 ">
+        <p-fieldset legend="KeyValue pipe" [toggleable]="true">
+            <ul *ngFor="let person of person | keyvalue">
+                <li>
+                    {{ person.key | titlecase }} - {{ person.value | titlecase }}
+                </li>
+            </ul>
+        </p-fieldset>
+    </div>
+</div>

@@ -1,1 +1,39 @@
-<p>number-page works!</p>
+<p-panel [showHeader]="false" class="surface-ground">
+    <h1>
+        Pipes númericos
+    </h1>
+    <p>
+        Pipes incluidos en el common module
+    </p>
+</p-panel>
+
+    <div class="grid mt-3">
+        <div class="col-12 md:col-6 ">
+            <p-card header="Numéro  decimal" subheader="Pipes con 2 decimales">
+                {{ totalSells | number:'1.2-2' }}
+            </p-card>
+        </div>
+
+        <div class="col-12 md:col-6 ">
+            <p-card header="Numéro  Guaranies" subheader="Moneda de paraguay">
+                {{ totalSells | currency:'PRY':'symbol-narrow' }}
+            </p-card>
+        </div>
+
+        <div class="col-12 md:col-6 ">
+            <p-card header="Numéro  USD" subheader="Moneda de estados unidos">
+                {{ totalSells | currency:'USD':'symbol-narrow' }}
+            </p-card>
+        </div>
+
+        <div class="col-12 md:col-6 ">
+            <p-card header="Porcentaje" subheader="Pipes para porcentajes">
+                {{ percent | percent }}
+            </p-card>
+        </div>
+        <div class="col-12">
+            <p-card header="Porcentaje" subheader="Pipes para porcentajes con decimal">
+                {{ percent | percent:'1.2-2' }}
+            </p-card>
+        </div>
+    </div>

@@ -6,100 +6,101 @@
         Pipes incluidos en el common module
     </p>
 
-    <div class="grid mt-3">
-        <!-- string -->
-        <div class="col-12 md:col-4 ">
-            <p-card header="uppercase">
-                {{ nameLowerCase | uppercase }}
-            </p-card>
-        </div>
-        <div class="col-12 md:col-4">
-            <p-card header="lowercase">
-                {{nameLowerCase | lowercase }}
-            </p-card>
-        </div>
-        <div class="col-12 md:col-4">
-            <p-card header="titlecase">
-                {{ nameTitleCase | titlecase }}
-            </p-card>
-        </div>
-
-        <!-- pipes para fechas  -->
-        <div class="col-12 md:col-6">
-            <p-card header="Pipes para Fechas ">
-                <ol>
-                    <li>
-                        Fecha | normal: 
-                    </li>
-                    <li>
-                        Fecha | sort: 
-                    </li>
-                    <li>
-                        Fecha | long: 
-                    </li>
-                    <li>
-                        Fecha | long: 
-                    </li>
-                    <li>
-                        Fecha | MMMM: 
-                    </li>
-                    <li>
-                        Fecha | MMMM / dd / yyyy: 
-                    </li>
-                </ol>
-            </p-card>
-        </div>
-        <div class="col-12 md:col-6">
-            <p-card header="Fechas">
-                <ol>
-                    <li>
-                        {{ customDate }}
-                    </li>
-                    <li>
-                        {{ customDate | date:'sort' }}
-                    </li>
-                    <li>
-                        {{ customDate | date:'long' }}
-                    </li>
-                    <li>
-                        {{ customDate | date:'MMMM' }}
-                    </li>
-                    <li>
-                        {{ customDate | date:'MMMM/dd/yyyy' }}
-                    </li>
-                    <li>
-                        {{ customDate | date:'long':'GMT-3'}}
-                    </li>
-                </ol>
-            </p-card>
-        </div>
-    </div>
-
-    <div class="grid mt-2">
-        <div class="col-6">
-            <p-card header="Idiomas">
-                <ol>
-                    <li>
-                        Date | español paraguay
-                    </li>
-                    <li>
-                        Date | español Honduras
-                    </li>
-                </ol>
-            </p-card>
-        </div>
-
-        <div class="col-6">
-            <p-card header="Idiomas">
-                <ol>
-                    <li>
-                        {{ customDate | date:'long':'':'es-PY' }}
-                    </li>
-                    <li>
-                        {{ customDate | date:'long':'':'es-HN' }}
-                    </li>
-                </ol>
-            </p-card>
-        </div>
-    </div>
 </p-panel>
+
+<div class="grid mt-3">
+    <!-- string -->
+    <div class="col-12 md:col-4 ">
+        <p-card header="uppercase">
+            {{ nameLowerCase | uppercase }}
+        </p-card>
+    </div>
+    <div class="col-12 md:col-4">
+        <p-card header="lowercase">
+            {{nameLowerCase | lowercase }}
+        </p-card>
+    </div>
+    <div class="col-12 md:col-4">
+        <p-card header="titlecase">
+            {{ nameTitleCase | titlecase }}
+        </p-card>
+    </div>
+
+    <!-- pipes para fechas  -->
+    <div class="col-12 md:col-6">
+        <p-card header="Pipes para Fechas ">
+            <ol>
+                <li>
+                    Fecha | normal: 
+                </li>
+                <li>
+                    Fecha | sort: 
+                </li>
+                <li>
+                    Fecha | long: 
+                </li>
+                <li>
+                    Fecha | long: 
+                </li>
+                <li>
+                    Fecha | MMMM: 
+                </li>
+                <li>
+                    Fecha | MMMM / dd / yyyy: 
+                </li>
+            </ol>
+        </p-card>
+    </div>
+    <div class="col-12 md:col-6">
+        <p-card header="Fechas">
+            <ol>
+                <li>
+                    {{ customDate }}
+                </li>
+                <li>
+                    {{ customDate | date:'sort' }}
+                </li>
+                <li>
+                    {{ customDate | date:'long' }}
+                </li>
+                <li>
+                    {{ customDate | date:'MMMM' }}
+                </li>
+                <li>
+                    {{ customDate | date:'MMMM/dd/yyyy' }}
+                </li>
+                <li>
+                    {{ customDate | date:'long':'GMT-3'}}
+                </li>
+            </ol>
+        </p-card>
+    </div>
+</div>
+
+<div class="grid mt-2">
+    <div class="col-6">
+        <p-card header="Idiomas">
+            <ol>
+                <li>
+                    Date | español paraguay
+                </li>
+                <li>
+                    Date | español Honduras
+                </li>
+            </ol>
+        </p-card>
+    </div>
+
+    <div class="col-6">
+        <p-card header="Idiomas">
+            <ol>
+                <li>
+                    {{ customDate | date:'long':'':'es-PY' }}
+                </li>
+                <li>
+                    {{ customDate | date:'long':'':'es-HN' }}
+                </li>
+            </ol>
+        </p-card>
+    </div>
+</div>
