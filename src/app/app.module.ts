@@ -6,6 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 
+//idioma espa paraguay
+import  localeEsPy from '@angular/common/locales/es-PY';
+import  localeEsHN from '@angular/common/locales/es-HN';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localeEsPy);
+registerLocaleData(localeEsHN);
+
 @NgModule({
   declarations: [
     AppComponent

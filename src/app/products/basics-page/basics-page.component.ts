@@ -11,4 +11,6 @@ export class BasicsPageComponent {
   public nameLowerCase: string = 'melgarejo';
   public nameTitleCase: string = 'cabrera';
 
+  public customDate: Date = new Date();
+
 }
