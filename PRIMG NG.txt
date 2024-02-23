@@ -1,0 +1,23 @@
+Angular y PrimeNG actualizado
+
+Tenia instalado angular 16 y nodejs v18. Lo que hice fue:
+. desinstalar nodejs 
+. borrar la carpeta npm que se encuentra en "AppData/Roaming/npm"
+. Borrar la carpeta npm-cache, se encuentra en "AppData/Local/npm-cache"
+
+Volvemos a instalar nodejs Version: 21.6.2
+. instalamos desde la pagina oficial: https://nodejs.org/en/download/current
+. npm --version (tiene que ser superior a 10.2.0) para tener la version de actualizada ejecutamos (npm install -g npm@10.4.0)
+. nodejs --version
+
+Instalamos angular CLI
+. npm install -g @angular/cli
+. ng version
+
+Creamos un nuevo proyecto de angular
+. ng new pipesApp --standalone false
+
+Ya podemos instalar primeng V17.7.0
+. npm i primeng
+
+Haciendo todos estos pasos no deberiamos tener confictos...

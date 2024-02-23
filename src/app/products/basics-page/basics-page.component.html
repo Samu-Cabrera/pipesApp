@@ -1,0 +1,26 @@
+<p-panel [showHeader]="false">
+    <h1>
+        Pipes Básicos
+    </h1>
+    <p>
+        Pipes incluidos en el common module
+    </p>
+
+    <div class="grid mt-3">
+        <div class="col-12 md:col-4">
+            <p-card header="uppercase">
+                {{ nameLowerCase | uppercase }}
+            </p-card>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-card header="lowercase">
+                {{nameLowerCase | lowercase }}
+            </p-card>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-card header="titlecase">
+                {{ nameTitleCase | titlecase }}
+            </p-card>
+        </div>
+    </div>
+</p-panel>
