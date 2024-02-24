@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BasicsPageComponent } from './basics-page/basics-page.component';
 import { NumberPageComponent } from './number-page/number-page.component';
 import { OncommonPageComponent } from './oncommon-page/oncommon-page.component';
+import { OrderComponent } from './order/order.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
     path: 'uncommon',
     component: OncommonPageComponent
   }, 
+  {
+    path: 'custom',
+    component: OrderComponent
+  },
   {
     path: '**',
     redirectTo: ''
